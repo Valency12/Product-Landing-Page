@@ -14,14 +14,14 @@
 /*Header*/
 header{
     background-color: var(--Brown-second-light);
-    padding: 0.3rem 0;
+    padding: 0.2rem 0;
     width: 100%;
 }
 
 .container{
-    max-width: 1200px;
+    /*max-width: 1200px;*/
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 2.5rem;
     display: flex; 
     justify-content: space-between;
     align-items: center;
@@ -32,7 +32,8 @@ header{
 }
 
 .logo img{
-    max-width: 150px;
+    max-width: calc(50px + 10vw);
+    /*height: auto;*/
 }
 
 .nav-list{
@@ -54,35 +55,39 @@ header{
 .nav-link:hover{
     background-color: var(--Brown-light);
     color: #FFFFFF;
-    padding: 1.8rem 1rem;
+    padding: 2.1rem 1rem;
     border-bottom: var(--Brown-dark) solid 3px;
 }
 
 .header-button1{
     background-color: var(--Brown-second-light);
-    border-radius: 20px;
+    /*border-radius: 20px;*/
     color: var(--Brown-second-dark);
     padding: 0.7rem 1rem;
     border: var(--Brown-second-dark) solid 2px;
     font-weight: bold;
-    font-size: calc(0.3rem + 1.0vw);
+    /*font-size: calc(0.3rem + 1.0vw);*/
     font-family: SoDo Sans, Helvetica, Arial, sans-serif;
 }
 
 .header-button2{
     background-color: var(--Brown-dark);
-    border-radius: 20px;
+    /*border-radius: 20px;*/
     color: #FFFFFF;
     padding: 0.7rem 1rem;
     font-weight: bold;
     border: var(--Brown-dark) solid 2px;
-    font-size: calc(0.3rem + 1.0vw);
+    /*font-size: calc(0.3rem + 1.0vw);*/
     font-family: SoDo Sans, Helvetica, Arial, sans-serif;
 }
 
 .header-button1, .header-button2{
     margin: 0 7px;
     cursor: pointer;
+    font-size: calc(0.3rem + 1.0vw);
+    padding: calc(0.3rem + 0.5vw) calc(0.5rem + 0.5vw);
+    width: calc(50px + 5vw);
+    border-radius: calc(10px + 1vw); /* Bordes redondeados dinámicos */
 }
 
 .header-button1:hover{
