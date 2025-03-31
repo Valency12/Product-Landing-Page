@@ -1,10 +1,11 @@
-*{
-    margin: 0; 
+* {
+    margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-:root{
-    --Brown-dark: #7F5539; 
+:root {
+    --Brown-dark: #7F5539;
     --Brown-second-dark: #7F5539;
     --Brown-light: #B08968;
     --Brown-second-light: #DDB892;
@@ -12,95 +13,162 @@
 }
 
 /*Header*/
-header{
+header {
     background-color: var(--Brown-second-light);
-    padding: 0.2rem 0;
+    padding: 0.1rem 0;
     width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 }
 
-.container{
-    /*max-width: 1200px;*/
+.container {
     margin: 0 auto;
-    padding: 0 2.5rem;
-    display: flex; 
+    padding: 0 1.9rem;
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#nav-bar{
+/* Logo */
+.logo img {
+    max-width: calc(25px + 12vw);
+}
+
+/* Navbar */
+#nav-bar {
     margin: 0 auto;
 }
 
-.logo img{
-    max-width: calc(50px + 10vw);
-    /*height: auto;*/
-}
-
-.nav-list{
+.nav-list {
     list-style: none;
     display: flex;
-    margin: 0; 
-    padding: 0; 
 }
 
-.nav-link{
+.nav-link {
     text-decoration: none;
     color: var(--Brown-dark);
     font-weight: bold;
     font-family: SoDo Sans, Helvetica, Arial, sans-serif;
-    font-size: calc(0.3rem + 1.0vw);
+    font-size: calc(0.5rem + 1.0vw);
     padding: 0.5rem 1rem;
+    line-height: 2.5;
 }
 
-.nav-link:hover{
+.nav-link:hover {
     background-color: var(--Brown-light);
     color: #FFFFFF;
-    padding: 2.1rem 1rem;
     border-bottom: var(--Brown-dark) solid 3px;
+    padding: 2.0rem 1rem;
 }
 
-.header-button1{
-    background-color: var(--Brown-second-light);
-    /*border-radius: 20px;*/
-    color: var(--Brown-second-dark);
-    padding: 0.7rem 1rem;
-    border: var(--Brown-second-dark) solid 2px;
-    font-weight: bold;
-    /*font-size: calc(0.3rem + 1.0vw);*/
-    font-family: SoDo Sans, Helvetica, Arial, sans-serif;
-}
-
-.header-button2{
-    background-color: var(--Brown-dark);
-    /*border-radius: 20px;*/
-    color: #FFFFFF;
-    padding: 0.7rem 1rem;
-    font-weight: bold;
-    border: var(--Brown-dark) solid 2px;
-    /*font-size: calc(0.3rem + 1.0vw);*/
-    font-family: SoDo Sans, Helvetica, Arial, sans-serif;
-}
-
-.header-button1, .header-button2{
-    margin: 0 7px;
+/* Botones */
+.header-button1, .header-button2 {
     cursor: pointer;
     font-size: calc(0.3rem + 1.0vw);
     padding: calc(0.3rem + 0.5vw) calc(0.5rem + 0.5vw);
     width: calc(50px + 5vw);
-    border-radius: calc(10px + 1vw); /* Bordes redondeados dinámicos */
+    border-radius: calc(10px + 1vw);
 }
 
-.header-button1:hover{
+.header-button1 {
+    background-color: var(--Brown-second-light);
+    color: var(--Brown-second-dark);
+    border: var(--Brown-second-dark) solid 2px;
+    font-weight: bold;
+}
+
+.header-button2 {
+    background-color: var(--Brown-dark);
+    color: #FFFFFF;
+    border: var(--Brown-dark) solid 2px;
+    font-weight: bold;
+}
+
+.header-button1:hover {
     background-color: var(--Brown-dark);
     color: #FFFFFF;
     border: var(--Brown-dark) solid 2px;
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-.header-button2:hover{
+.header-button2:hover {
     background-color: var(--Brown-second-light);
     color: var(--Brown-dark);
     border: var(--Brown-dark) solid 2px;
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
-    
+}
+
+/* Menú Hamburguesa */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: calc(5px - 1px);
+}
+
+.bar {
+    width: calc(15px + 1vw);
+    height: calc(3px + 1px);
+    background-color: var(--Brown-dark);
+    border-radius: 5px;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: var(--Brown-second-light);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    padding-top: 60px;
+}
+
+.sidebar .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 25px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.sidebar .nav-list {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.sidebar-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar-buttons button {
+    width: 80%;
+    margin: 10px 0;
+}
+
+/* Responsive */
+@media screen and (max-width: 790px) {
+    #nav-bar, .header-buttons {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .sidebar {
+        right: -250px;
+    }
+
+    .sidebar.active {
+        right: 0;
+    }
 }
