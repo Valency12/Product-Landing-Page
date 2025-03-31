@@ -33,6 +33,7 @@ header {
 /* Logo */
 .logo img {
     max-width: calc(25px + 12vw);
+    min-width: 90px; /* Tamaño mínimo */
 }
 
 /* Navbar */
@@ -104,7 +105,9 @@ header {
     display: none;
     cursor: pointer;
     flex-direction: column;
-    gap: calc(5px - 1px);
+    gap: calc(4px - 1px);
+    min-width: 40px; /* Tamaño mínimo */
+    width: calc(30px + 2vw); /* Aumenta dinámicamente con el tamaño de la pantalla */
 }
 
 .bar {
@@ -172,3 +175,10 @@ header {
         right: 0;
     }
 }
+
+/*Hero section*/
+.hero{
+    margin-top: 6rem;
+}
+
+/*TENEMOS QUE CAMBIAR EL MARGIN DEL MENU BAR*/
