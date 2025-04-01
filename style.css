@@ -28,7 +28,7 @@ header {
     position: fixed;
     top: 0;
     z-index: 1000;
-    border-bottom: #FFFFFF solid 1px;
+    border-bottom: var(--Brown-dark) solid 1px;
 }
 
 .container {
@@ -140,8 +140,7 @@ header {
     margin-top: 48px; 
     background-color: var(--Brown-second-light);
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-    border-top: var(--Brown-dark) solid 2px;
-    border-bottom: var(--Brown-dark) solid 2px;
+    border-top: var(--Brown-dark) solid 1px;
     transition: 0.3s;
     padding-top: 60px;
 }
@@ -197,14 +196,24 @@ header {
     }
 
     /* FALTA MODIFICAR EL TEXTO SEGUN EL TAMAÑO DE LA PANTALLA */
+    .hero{
+        margin-top: 2rem;
+        text-align: center;
+        padding: calc(80px + 1vw) 0 calc(80px + 1vw);
+    }
 
-    .title{
-        font-size: calc(1.5rem + 2vw);
-        line-height: 15px;
+    .hero-content{
+        margin-bottom: 2rem;
+    }    
+
+    .title{ 
+        font-size: calc(1.5rem + 1vw);
+        /*line-height: 15px;*/
     }
     .title2{
-        font-size: calc(3.0rem + 2vw);
-        line-height: 50px;
+        /*letter-spacing: 0.5px; */
+        padding: 0 20px; 
+        font-size: calc(1.2rem + 1vw);
     }
     
     .subtitulo{
@@ -218,17 +227,19 @@ header {
 /*Hero section*/
 
 .hero-content{
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
 }
 
 .hero{
-    margin-top: 3rem;
+    /*margin-top: 5rem;*/
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.144)),url('Fondo.png');
     background-size: cover;
     background-position: center;
     color: white;
     text-align: center;
-    padding: 185px 0 90px; 
+    padding: calc(140px + 0.5vw) 0 calc(140px + 0.5vw);
+    width: 100%;
+    height: auto;
 }
 
 .title{
@@ -236,25 +247,26 @@ header {
     font-family: "Winky Sans", sans-serif, Italic;
     font-weight: 600;
     color: #FFFFFF; 
-    line-height: 50px;
+    margin-top: 25px;
+    /*line-height: 50px;*/
 }
 
 .title2{
-    font-size: calc(3.0rem + 2vw);
+    font-size: calc(2.0rem + 2vw);
     font-family: "Winky Sans", sans-serif, Italic;
-    font-weight: 600;
+    font-weight: 800;
     letter-spacing: 3px; 
     color: #FFFFFF; 
-    line-height: 110px;
+    /*line-height: 110px;*/
 }
 
 .subtitulo{
-    font-size: calc(0.9rem + 0.5vw);
+    font-size: calc(0.7rem + 0.5vw);
     font-family: "Winky Sans", sans-serif, Italic;
     font-weight: 600;
-    line-height: 30px;
-    margin-top: 5px;
-    margin-bottom: 70px;
+    line-height: 22px;
+    margin-top: 25px;
+    margin-bottom: 60px;
 }
 
 .btncallaction{
