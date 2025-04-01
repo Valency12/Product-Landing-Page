@@ -20,6 +20,7 @@ header {
     position: fixed;
     top: 0;
     z-index: 1000;
+    border-bottom: #FFFFFF solid 1px;
 }
 
 .container {
@@ -146,8 +147,6 @@ header {
     cursor: pointer;
 }
 
-
-
 .sidebar .nav-list {
     flex-direction: column;
     text-align: center;
@@ -190,7 +189,15 @@ header {
 
 /*Hero section*/
 .hero{
-    margin-top: 6rem;
+    margin-top: 3rem;
+    background-image: url('Fondo.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 150px 0 350px; 
 }
+
+
 
 /*TENEMOS QUE CAMBIAR EL MARGIN DEL MENU BAR*/  
