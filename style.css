@@ -24,15 +24,16 @@ header {
 
 .container {
     margin: 0 auto;
-    padding: 0 1.9rem;
+    padding: 0 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+   /* gap: clamp(20px, 5vw, 50px); /* Espaciado mínimo de 20px, dinámico hasta 50px */
 }
 
 /* Logo */
 .logo img {
-    max-width: calc(25px + 12vw);
+    max-width: calc(20px + 10vw);
     min-width: 90px; /* Tamaño mínimo */
 }
 
@@ -60,7 +61,7 @@ header {
     background-color: var(--Brown-light);
     color: #FFFFFF;
     border-bottom: var(--Brown-dark) solid 3px;
-    padding: 2.0rem 1rem;
+    padding: 1.6rem 1rem;
 }
 
 /* Botones */
@@ -108,6 +109,7 @@ header {
     gap: calc(4px - 1px);
     min-width: 40px; /* Tamaño mínimo */
     width: calc(30px + 2vw); /* Aumenta dinámicamente con el tamaño de la pantalla */
+    padding-left: 18px;
 }
 
 .bar {
@@ -124,14 +126,18 @@ header {
     right: -250px;
     width: 250px;
     height: 100%;
+    margin-top: 48px; 
     background-color: var(--Brown-second-light);
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    border-top: var(--Brown-dark) solid 2px;
+    border-bottom: var(--Brown-dark) solid 2px;
     transition: 0.3s;
     padding-top: 60px;
 }
 
 .sidebar .close-btn {
     position: absolute;
+    color: var(--Brown-dark);
     top: 10px;
     right: 15px;
     font-size: 25px;
@@ -139,6 +145,8 @@ header {
     border: none;
     cursor: pointer;
 }
+
+
 
 .sidebar .nav-list {
     flex-direction: column;
@@ -174,6 +182,10 @@ header {
     .sidebar.active {
         right: 0;
     }
+
+    .nav-link:hover {
+        border-bottom: var(--Brown-dark) solid 3px;
+    }
 }
 
 /*Hero section*/
@@ -181,4 +193,4 @@ header {
     margin-top: 6rem;
 }
 
-/*TENEMOS QUE CAMBIAR EL MARGIN DEL MENU BAR*/
+/*TENEMOS QUE CAMBIAR EL MARGIN DEL MENU BAR*/  
