@@ -12,6 +12,14 @@
     --Brown-lightest: #E6CCB2;
 }
 
+
+/*.winky-sans-<uniquifier> {
+    font-family: "Winky Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  }*/
+
 /*Header*/
 header {
     background-color: var(--Brown-second-light);
@@ -51,8 +59,8 @@ header {
 .nav-link {
     text-decoration: none;
     color: var(--Brown-dark);
-    font-weight: bold;
-    font-family: SoDo Sans, Helvetica, Arial, sans-serif;
+    font-family: "Winky Sans", sans-serif, Italic;
+    font-weight: 600;
     font-size: calc(0.5rem + 1.0vw);
     padding: 0.5rem 1rem;
     line-height: 2.5;
@@ -67,6 +75,8 @@ header {
 
 /* Botones */
 .header-button1, .header-button2 {
+    font-family: "Winky Sans", sans-serif, Italic;
+    font-weight: 600;
     cursor: pointer;
     font-size: calc(0.3rem + 1.0vw);
     padding: calc(0.3rem + 0.5vw) calc(0.5rem + 0.5vw);
@@ -81,7 +91,7 @@ header {
     font-weight: bold;
 }
 
-.header-button2 {
+.header-button2{
     background-color: var(--Brown-dark);
     color: #FFFFFF;
     border: var(--Brown-dark) solid 2px;
@@ -185,19 +195,74 @@ header {
     .nav-link:hover {
         border-bottom: var(--Brown-dark) solid 3px;
     }
+
+    /* FALTA MODIFICAR EL TEXTO SEGUN EL TAMAÑO DE LA PANTALLA */
+
+    .title{
+        font-size: calc(1.5rem + 2vw);
+        line-height: 15px;
+    }
+    .title2{
+        font-size: calc(3.0rem + 2vw);
+        line-height: 50px;
+    }
+    
+    .subtitulo{
+        line-height: 30px;
+        margin-top: 5px;
+        margin-bottom: 70px;
+    }
+    
 }
 
 /*Hero section*/
 .hero{
     margin-top: 3rem;
-    background-image: url('Fondo.png');
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.144)),url('Fondo.png');
     background-size: cover;
     background-position: center;
     color: white;
     text-align: center;
-    padding: 150px 0 350px; 
+    padding: 185px 0 90px; 
 }
 
+.title{
+    font-size: calc(1.5rem + 2vw);
+    font-family: "Winky Sans", sans-serif, Italic;
+    font-weight: 600;
+    color: #FFFFFF; 
+    line-height: 50px;
+}
 
+.title2{
+    font-size: calc(3.0rem + 2vw);
+    font-family: "Winky Sans", sans-serif, Italic;
+    font-weight: 600;
+    letter-spacing: 3px; 
+    color: #FFFFFF; 
+    line-height: 110px;
+}
 
-/*TENEMOS QUE CAMBIAR EL MARGIN DEL MENU BAR*/  
+.subtitulo{
+    font-size: calc(0.9rem + 0.5vw);
+    font-family: "Winky Sans", sans-serif, Italic;
+    font-weight: 600;
+    line-height: 30px;
+    margin-top: 5px;
+    margin-bottom: 70px;
+}
+
+.btncallaction{
+    font-family: "Winky Sans", sans-serif, Italic;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: calc(0.3rem + 1.0vw);
+    padding: calc(0.3rem + 0.5vw) calc(0.5rem + 0.5vw);
+    width: calc(50px + 5vw);
+    border-radius: calc(10px + 1vw);
+    background-color: var(--Brown-dark);
+    color: #FFFFFF;
+    border: var(--Brown-dark) solid 2px;
+    font-weight: bold; 
+    text-decoration: none;
+}
