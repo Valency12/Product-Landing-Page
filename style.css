@@ -37,7 +37,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-   /* gap: clamp(20px, 5vw, 50px); /* Espaciado mínimo de 20px, dinámico hasta 50px */
 }
 
 /* Logo */
@@ -87,28 +86,28 @@ header {
 .header-button1 {
     background-color: var(--Brown-second-light);
     color: var(--Brown-second-dark);
-    border: var(--Brown-second-dark) solid 2px;
+    border: var(--Brown-second-dark) solid 1px;
     font-weight: bold;
 }
 
 .header-button2{
     background-color: var(--Brown-dark);
     color: #FFFFFF;
-    border: var(--Brown-dark) solid 2px;
+    border: var(--Brown-dark) solid 1px;
     font-weight: bold;
 }
 
 .header-button1:hover {
     background-color: var(--Brown-dark);
     color: #FFFFFF;
-    border: var(--Brown-dark) solid 2px;
+    border: var(--Brown-dark) solid 1px;
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .header-button2:hover {
     background-color: var(--Brown-second-light);
     color: var(--Brown-dark);
-    border: var(--Brown-dark) solid 2px;
+    border: var(--Brown-dark) solid 1px;
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
 }
 
@@ -195,7 +194,6 @@ header {
         border-bottom: var(--Brown-dark) solid 3px;
     }
 
-    /* FALTA MODIFICAR EL TEXTO SEGUN EL TAMAÑO DE LA PANTALLA */
     .hero{
         margin-top: 2rem;
         text-align: center;
@@ -203,10 +201,8 @@ header {
     }
     .title{ 
         font-size: calc(1.5rem + 1vw);
-        /*line-height: 15px;*/
     }
     .title2{
-        /*letter-spacing: 0.5px; */
         padding: 0 20px; 
         font-size: calc(1.2rem + 1vw);
     }
@@ -227,7 +223,6 @@ header {
 /*Hero section*/
 
 .hero{
-    /*margin-top: 5rem;*/
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.144)),url('Fondo.png');
     background-size: cover;
     background-position: center;
@@ -244,7 +239,6 @@ header {
     font-weight: 600;
     color: #FFFFFF; 
     margin-top: 25px;
-    /*line-height: 50px;*/
 }
 
 .title2{
@@ -253,7 +247,6 @@ header {
     font-weight: 800;
     letter-spacing: 3px; 
     color: #FFFFFF; 
-    /*line-height: 110px;*/
 }
 
 .subtitulo{
@@ -279,4 +272,52 @@ header {
     font-weight: bold; 
     text-decoration: none;
     top: 150px; 
+}
+
+/*Nuestra historia*/
+.container-two{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.nuestra-historia{
+    background-color: #FFFFFF;
+    width: 100%;
+    padding: 130px;
+}
+.image1{
+    flex-basis: 40%;
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    padding: 0;
+}
+
+.text{
+    flex-basis: 60%;
+    font-family: "Winky Sans", sans-serif, Italic;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    line-height: 2.0;
+    color: var(--Brown-dark);
+    text-align: left;
+}
+
+.titulo-historia{
+    font-size: calc(1.3rem + 1vw);
+    font-family: "Winky Sans", sans-serif, Italic;
+    font-weight: 600;
+    color: var(--Brown-dark); 
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+.principal-words{
+    font-size: calc(1.9rem + 1vw);
+}
+
+.historia{
+    font-size: calc(0.4rem + 1vw);
+    font-weight: 500;
 }
