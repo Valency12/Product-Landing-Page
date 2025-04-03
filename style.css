@@ -406,19 +406,46 @@ header {
 }
 .text-productos{
     background-color: var(--Brown-lightest);
-    padding: 100px 20px;
+    padding: 130px 20px 60px;
 }
 .titulo-productos{
-    font-size: calc(3.0rem - 1.5vw);
+    font-size: calc(25px + 0.9vw);
     font-family: "Winky Sans", sans-serif, Italic;
-    font-weight: 700;
+    font-weight: 800;
     color: var(--Brown-dark); 
     line-height: 1.5;
+    letter-spacing: 1.5px;
+    margin-bottom: 30px;
 }
 .subtitulo-productos{
-    font-size: calc(2.5rem - 2.0vw);
+    font-size: calc(17px + 1.0vw);
     font-family: "Winky Sans", sans-serif, Italic;
     font-weight: 500;
     line-height: 2.0;
     color: var(--Brown-dark); 
+}
+
+.container-btn-productos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 30px;
+   
+}
+
+.btn1{
+    font-size: calc(17px + 1.0vw);
+    font-family: "Winky Sans", sans-serif, Italic;
+    font-weight: 500;
+    line-height: 2.0;
+    color: var(--Brown-dark); 
+    background-color: transparent;
+    border: none;
+    padding: 20px;
+}
+.btn1:hover{
+    background-color: transparent;
+    border-bottom: var(--Brown-dark) solid 2px;
+    padding: 20px;
 }
