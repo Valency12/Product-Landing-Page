@@ -406,7 +406,7 @@ header {
 }
 .text-productos{
     background-color: var(--Brown-lightest);
-    padding: 130px 20px 60px;
+    padding: 110px 20px 60px;
 }
 .titulo-productos{
     font-size: calc(25px + 0.9vw);
@@ -415,7 +415,7 @@ header {
     color: var(--Brown-dark); 
     line-height: 1.5;
     letter-spacing: 1.5px;
-    margin-bottom: 30px;
+    margin-bottom: 3px;
 }
 .subtitulo-productos{
     font-size: calc(17px + 1.0vw);
@@ -431,7 +431,6 @@ header {
     align-items: center;
     gap: 50px;
     margin-top: 30px;
-   
 }
 
 .btn1{
@@ -447,5 +446,55 @@ header {
 .btn1:hover{
     background-color: transparent;
     border-bottom: var(--Brown-dark) solid 2px;
-    padding: 20px;
+    padding: 20px 20px 5px 20px;
+}
+
+/*Carrusel*/
+/* Carrusel */
+.carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 24px;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
