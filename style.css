@@ -237,7 +237,7 @@ header {
     font-size: calc(1.5rem + 2vw);
     font-family: "Winky Sans", sans-serif, Italic;
     font-weight: 600;
-    color: #FFFFFF; 
+    color: var(--Brown-dark); 
     margin-top: 25px;
 }
 
@@ -246,7 +246,7 @@ header {
     font-family: "Winky Sans", sans-serif, Italic;
     font-weight: 800;
     letter-spacing: 3px; 
-    color: #FFFFFF; 
+    color: var(--Brown-lightest); 
 }
 
 .subtitulo{
@@ -263,15 +263,23 @@ header {
     font-weight: 600;
     cursor: pointer;
     font-size: calc(0.5rem + 1.0vw);
-    padding: calc(0.3rem + 0.5vw) calc(0.5rem + 0.5vw);
+    padding: calc(0.2rem + 0.5vw) 30px calc(0.4rem + 0.5vw) 30px;
     width: calc(50px + 5vw);
     border-radius: calc(10px + 1vw);
     background-color: var(--Brown-dark);
     color: #FFFFFF;
-    border: var(--Brown-light) solid 1px;
+    /*border: var(--Brown-light) solid 1px;*/
     font-weight: bold; 
     text-decoration: none;
     top: 150px; 
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btncallaction:hover{
+    transform: translateY(-5px); /* Mueve el botón hacia arriba */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+    background-color: var(--Brown-second-dark); /* Cambia el color de fondo opcionalmente */
+    color: #FFFFFF; /* Asegura que el texto siga siendo visible */
+    
 }
 
 /*Nuestra historia*/
@@ -316,9 +324,9 @@ header {
     font-weight: 500;
     background-color: #FFFFFF;
     margin-left: 0px;
-    min-width: 80px;
-    margin-right: calc(100px + 1vw);
-    padding: 60px;
+    min-width: 150px;
+    /*margin-right: calc(100px + 1vw);*/
+    padding: calc(55px - 1vw);
     line-height: 2.0;
     color: var(--Brown-dark);
     text-align: left;
