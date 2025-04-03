@@ -296,19 +296,13 @@ header {
     background-image: url('image1.png');
     padding: calc(200px + 1vw) 150px calc(200px + 1vw) 0;
     object-fit: cover; 
+    background-repeat: no-repeat;
 }
 
 .nuestra-historia{
     background-color: #FFFFFF;
     width: 100%;
     /*padding: 130px;*/
-}
-.image1{
-    flex-basis: 20%;
-    width: 100%;
-    height: 700px;
-    object-fit: cover;
-    padding: 0;
 }
 
 .container-three{
@@ -326,7 +320,7 @@ header {
     margin-left: 0px;
     min-width: 150px;
     /*margin-right: calc(100px + 1vw);*/
-    padding: calc(55px - 1vw);
+    padding: calc(60px - 1vw);
     line-height: 2.0;
     color: var(--Brown-dark);
     text-align: left;
@@ -349,4 +343,36 @@ header {
 .historia{
     font-size: calc(0.4rem + 1vw);
     font-weight: 500;
+}
+
+@media screen and (max-width: 678px){
+    .image-history{
+        padding: calc(150px + 1vw) 90px calc(250px + 1vw) 0px;
+    }
+    .text{
+        margin-left: 0px;
+        min-width: 150px;
+        padding: calc(50px - 1vw);
+    }
+    .historia{
+        font-size: calc(0.6rem + 1vw);
+    }
+}
+
+@media screen and (max-width: 480px) and (min-width: 320px){
+    .image-history{
+        padding: calc(150px + 1vw) 0px calc(250px + 1vw) 0px;
+        background-size: 50%;
+        background-position: center;
+    }
+    .text{
+        margin-left: 0px;
+        min-width: 150px;
+        border-bottom-right-radius: 0px;
+        border-top-right-radius: 0px;
+
+    }
+    .historia{
+        font-size: calc(0.9rem + 1vw);
+    }
 }
