@@ -173,7 +173,7 @@ header {
 }
 
 /* Responsive */
-@media screen and (max-width: 790px) {
+@media screen and (max-width: 790px) and (min-width: 320px){
     #nav-bar, .header-buttons {
         display: none;
     }
@@ -197,7 +197,9 @@ header {
     .hero{
         margin-top: 2rem;
         text-align: center;
-        padding: calc(80px + 1vw) 0 calc(80px + 1vw);
+        background-position: center;
+        background-size: 50%;
+        padding: calc(60px + 1vw) 0 calc(200px + 1vw);
     }
     .title{ 
         font-size: calc(1.5rem + 1vw);
@@ -228,13 +230,13 @@ header {
     background-position: center;
     color: white;
     text-align: center;
-    padding: calc(165px + 0.5vw) 0 calc(140px + 0.5vw);
+    padding: calc(180px + 0.5vw) 0 calc(200px + 0.5vw);
     width: 100%;
     height: auto;
 }
 
 .title{
-    font-size: calc(1.5rem + 2vw);
+    font-size: calc(1.8rem + 2vw);
     font-family: "Winky Sans", sans-serif, Italic;
     font-weight: 600;
     color: var(--Brown-dark); 
@@ -242,7 +244,7 @@ header {
 }
 
 .title2{
-    font-size: calc(2.0rem + 2vw);
+    font-size: calc(2.4rem + 2vw);
     font-family: "Winky Sans", sans-serif, Italic;
     font-weight: 800;
     letter-spacing: 3px; 
@@ -250,12 +252,13 @@ header {
 }
 
 .subtitulo{
-    font-size: calc(0.7rem + 0.5vw);
+    font-size: calc(0.8rem + 0.5vw);
     font-family: "Winky Sans", sans-serif, Italic;
     font-weight: 600;
     line-height: 22px;
     margin-top: 25px;
     margin-bottom: 60px;
+    letter-spacing: 1.0px;
 }
 
 .btncallaction{
@@ -294,9 +297,8 @@ header {
 
 .image-history{
     background-image: url('image1.png');
-    padding: calc(200px + 1vw) 150px calc(200px + 1vw) 0;
+    padding: calc(200px + 1vw) 250px calc(250px + 1vw) 0;
     object-fit: cover; 
-    background-repeat: no-repeat;
 }
 
 .nuestra-historia{
@@ -320,7 +322,7 @@ header {
     margin-left: 0px;
     min-width: 150px;
     /*margin-right: calc(100px + 1vw);*/
-    padding: calc(60px - 1vw);
+    padding: calc(50px - 1vw);
     line-height: 2.0;
     color: var(--Brown-dark);
     text-align: left;
@@ -334,18 +336,22 @@ header {
     font-weight: 600;
     color: var(--Brown-dark); 
     line-height: 1.5;
-    margin-bottom: 30px;
+    /*padding: 30px;*/
+    margin-left: 5px;
 }
 .principal-words{
     font-size: calc(1.9rem + 1vw);
 }
 
 .historia{
-    font-size: calc(0.4rem + 1vw);
+    font-size: calc(0.7rem + 1vw);
     font-weight: 500;
+    /*padding: 30px;*/
+    margin-top: 20px;
+    margin-left: 5px;
 }
 
-@media screen and (max-width: 678px){
+@media screen and (max-width: 999px) and (min-width: 700px){
     .image-history{
         padding: calc(150px + 1vw) 90px calc(250px + 1vw) 0px;
     }
@@ -357,12 +363,21 @@ header {
     .historia{
         font-size: calc(0.6rem + 1vw);
     }
+    
+    
+    .titulo-historia{
+        font-size: calc(1.0rem + 1vw);
+        padding: 0px;
+    }
+    .principal-words{
+        font-size: calc(1.5rem + 1vw);
+    }
 }
 
-@media screen and (max-width: 480px) and (min-width: 320px){
+@media screen and (max-width: 699px) and (min-width: 320px){
     .image-history{
         padding: calc(150px + 1vw) 0px calc(250px + 1vw) 0px;
-        background-size: 50%;
+        /*background-size: 100%;*/
         background-position: center;
     }
     .text{
@@ -373,6 +388,37 @@ header {
 
     }
     .historia{
-        font-size: calc(0.9rem + 1vw);
+        font-size: calc(0.7rem + 1vw);
     }
+    .titulo-historia{
+        font-size: calc(0.9rem + 1vw);
+        padding: 0px;
+    }
+    .principal-words{
+        font-size: calc(1.2rem + 1vw);
+    }
+}
+
+.container-three{
+    background-color: var(--Brown-lightest);
+    margin: 0px 0px;
+    text-align: center;
+}
+.text-productos{
+    background-color: var(--Brown-lightest);
+    padding: 100px 20px;
+}
+.titulo-productos{
+    font-size: calc(3.0rem - 1.5vw);
+    font-family: "Winky Sans", sans-serif, Italic;
+    font-weight: 700;
+    color: var(--Brown-dark); 
+    line-height: 1.5;
+}
+.subtitulo-productos{
+    font-size: calc(2.5rem - 2.0vw);
+    font-family: "Winky Sans", sans-serif, Italic;
+    font-weight: 500;
+    line-height: 2.0;
+    color: var(--Brown-dark); 
 }
