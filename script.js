@@ -21,22 +21,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
-const carouselImages = document.querySelector('.carousel-images');
+const carouselTrack = document.querySelector('.carousel-track');
+const items = document.querySelectorAll('.carousel-item');
 
 let currentIndex = 0;
+const itemsToShow = 3; // Número de imágenes visibles
+const totalItems = items.length;
 
 prevBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex > 0) ? currentIndex - 1 : 0;
+    currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalItems - itemsToShow;
     updateCarousel();
 });
 
 nextBtn.addEventListener('click', () => {
-    const totalImages = carouselImages.children.length;
-    currentIndex = (currentIndex < totalImages - 1) ? currentIndex + 1 : totalImages - 1;
+    currentIndex = (currentIndex < totalItems - itemsToShow) ? currentIndex + 1 : 0;
     updateCarousel();
 });
 
 function updateCarousel() {
-    const imageWidth = carouselImages.children[0].clientWidth;
-    carouselImages.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
+    const itemWidth = items[0].clientWidth;
+    carouselTrack.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
 }
