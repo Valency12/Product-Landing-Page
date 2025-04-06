@@ -453,7 +453,8 @@ header {
 /* Carrusel */
 .container-four{
     background-color: var(--Brown-lightest);
-    padding: 20px 0;
+    padding: 0;
+    margin:0;
 }
 
 .carousel {
