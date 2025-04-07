@@ -453,7 +453,7 @@ header {
 /* Carrusel */
 .container-four{
     background-color: var(--Brown-lightest);
-    padding: 0;
+    padding: 0 0 120px 0;
     margin:0;
 }
 
@@ -469,14 +469,17 @@ header {
 .carousel-track {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    gap: 20px;
 }
 
 .carousel-item {
     flex: 0 0 33.33%; /* Cada imagen ocupa un tercio del ancho del carrusel */
     text-align: center;
     position: relative;
-    padding: 10px;
+    padding: 10px 0px 200px 0px;
     box-sizing: border-box;
+    background-color: #FFFFFF;
+    border-radius: 25px;
 }
 
 .carousel-item img {
@@ -487,14 +490,29 @@ header {
 
 .carousel-item h3 {
     position: absolute;
-    bottom: 80px;
+    /*bottom: 80px;*/
     left: 50%;
+    margin-top: 20px;
     transform: translateX(-50%);
     color: white;
-    font-size: 1.2rem;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 5px 10px;
+    /*background-color: rgba(0, 0, 0, 0.5);*/
+    font-family: "Winky Sans", sans-serif, Italic;
+    color: var(--Brown-dark);
+    font-weight: 800;
+    font-size: calc(0.6rem + 1vw);
+    padding: 0px 10px 20px 10px;
     border-radius: 5px;
+}
+.descripcion{
+    font-family: "Winky Sans", sans-serif, Italic;
+    font-weight: 500;
+    font-size: calc(0.5rem + 1vw);
+    color: var(--Brown-dark);
+    text-align: center;
+    margin: 90px auto;
+    max-width: 80%;
+    line-height: 1.6;
+    box-sizing: border-box;
 }
 
 .explore-btn {
@@ -502,17 +520,23 @@ header {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #d32f2f;
+    background-color: var(--Brown-dark);
     color: white;
     border: none;
-    padding: 8px 15px;
-    border-radius: 5px;
+    padding: 20px 35px;
+    border-radius: 30px;
+    font-family: "Winky Sans", sans-serif, Italic;
+    font-weight: 800;
+    letter-spacing: 2px;
     cursor: pointer;
-    font-size: 0.9rem;
+    font-size: 1.4rem;
+    margin-top:  50px;
 }
 
 .explore-btn:hover {
-    background-color: #b71c1c;
+    background-color: var(--Brown-light);
+    color: var(--Brown-dark);
+    border: var(--Brown-dark) solid 1px;
 }
 
 /* Botones de navegación */
