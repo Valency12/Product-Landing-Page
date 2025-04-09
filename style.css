@@ -597,3 +597,44 @@ header {
     line-height: 2.0;
     color: var(--Brown-dark); 
 }
+
+/*tarjetas de recetas*/
+.tarjeta-receta{
+    background-color: var(--Brown-lightest);
+    margin: 20px;
+    display: flex;
+    /*justify-content: space-between;*/
+    /*align-items: right;*/
+    padding: calc(20px + 1vw) calc(30px + 1vw);
+    border-radius: 50px;
+    /*display: flex;*/
+}
+.container-text{
+    margin: 20px 30px;
+    font-family: "Winky Sans", sans-serif, Italic;
+}
+
+.referencia, .title-receta, .subtitle-receta{
+    text-align: left;
+}
+.container-subtitle-receta{
+    display: flex;
+}
+
+.receta-text{
+    text-align: left;
+}
+
+.image-receta{
+    width: 40%;
+    height: auto;
+    border-radius: 50px;
+}
+
+.container-btn-like{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 10px;
+}
