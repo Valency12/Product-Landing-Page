@@ -42,3 +42,19 @@ function updateCarousel() {
     const itemWidth = items[0].clientWidth;
     carouselTrack.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
 }
+
+const track = document.querySelector('.carousel-track');
+const cards = document.querySelectorAll('.tarjeta-receta');
+
+// Función para mover el carrusel
+function moveCarousel() {
+    currentIndex++;
+    if (currentIndex >= cards.length) {
+        currentIndex = 0; // Reinicia al inicio
+    }
+    const translateX = -currentIndex * cards[0].offsetWidth; // Calcula el desplazamiento
+    track.style.transform = `translateX(${translateX}px)`;
+}
+
+// Ejecuta el carrusel automáticamente cada 3 segundos
+setInterval(moveCarousel, 3000);

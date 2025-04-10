@@ -600,23 +600,18 @@ header {
 
 /*tarjetas de recetas*/
 .tarjeta-receta{
+    flex: 0 0 80%; /* Cada tarjeta ocupa el 80% del ancho del carrusel */
+    max-width: 400px; /* Tamaño máximo */
+    min-width: 300px; /* Tamaño mínimo */
+
     background-color: var(--Brown-lightest);
-    /*margin: 10px;*/
-    /*padding: 20px;*/
     display: flex;
     width: 85%;
     margin: 10px auto;
     height: auto;
-    
-    /*max-width: 400px;*/
-    /*min-width: 250px;
-    height: auto;
-    min-height: 150px;
-    /*justify-content: space-between;*/
-    /*align-items: right;*/
     border-radius: 50px;
-    /*display: flex;*/
 }
+
 .container-text{
     margin-left: 10px;
     padding: 25px;
@@ -693,4 +688,16 @@ header {
     font-weight: 700;
     font-size: 25px;
     text-align: center;
+}
+
+.carousel-recetas {
+    overflow: hidden; /* Oculta las tarjetas que no están visibles */
+    width: 100%; /* Ajusta al ancho del contenedor */
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Animación suave */
+    gap: 20px; /* Espaciado entre tarjetas */
 }
