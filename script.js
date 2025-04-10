@@ -40,22 +40,39 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-//codigo de copilot
-document.addEventListener("DOMContentLoaded", () => {
-    const track = document.querySelector(".carousel-track");
-    const items = document.querySelectorAll(".tarjeta-receta");
-    const itemWidth = items[0].offsetWidth + parseInt(getComputedStyle(items[0]).marginRight);
-    let currentPosition = 0;
+/*carrusel de productos*/
+document.addEventListener('DOMContentLoaded', () => {
+    const carrusel = document.querySelector('.carrusel');
+    const carruselContainer = document.querySelector('.carrusel-container');
+    const productos = document.querySelectorAll('.producto');
+    let currentIndex = 0;
+    const totalProductos = productos.length;
+    let intervalo;
+    let isPaused = false;
 
-    function moveCarousel() {
-        currentPosition -= itemWidth;
-        if (Math.abs(currentPosition) >= track.scrollWidth) {
-            currentPosition = 0; // Reinicia el carrusel
+    function moverCarrusel() {
+        if (!isPaused) {
+            currentIndex = (currentIndex + 1) % totalProductos;
+            const offset = currentIndex * -33.33;
+            carrusel.style.transform = `translateX(${offset}%)`;
         }
-        track.style.transform = `translateX(${currentPosition}px)`;
     }
 
-    // Mueve el carrusel automáticamente cada 3 segundos
-    setInterval(moveCarousel, 3000);
-});
+    function iniciarCarrusel() {
+        isPaused = false;
+        intervalo = setInterval(moverCarrusel, 5000);
+    }
+
+    function detenerCarrusel() {
+        isPaused = true;
+        clearInterval(intervalo);
+    }
+
+    // Iniciar el carrusel automático
+    iniciarCarrusel();
+
+    // Eventos para pausar y reanudar el carrusel
+    carruselContainer.addEventListener('mouseenter', detenerCarrusel);
+    carruselContainer.addEventListener('mouseleave', iniciarCarrusel);
+}); 
 

@@ -399,6 +399,7 @@ header {
     }
 }
 
+/*Seccion de productos*/
 .container-three{
     background-color: var(--Brown-lightest);
     margin: 0px 0px;
@@ -406,7 +407,7 @@ header {
 }
 .text-productos{
     background-color: var(--Brown-lightest);
-    padding: 110px 20px 60px;
+    padding: 110px 20px 10px;
 }
 .titulo-productos{
     font-size: calc(25px + 0.9vw);
@@ -449,126 +450,72 @@ header {
     padding: 20px 20px 5px 20px;
 }
 
-/*Carrusel*/
-/* Carrusel */
-.container-four{
-    background-color: var(--Brown-lightest);
-    padding: 60px;
-    margin:0;
-}
-
-.carousel {
-   /*position: relative;
-    /*width: 100%;
-    /*max-width: 1200px;*/
-    margin: 0 auto;
-    /*overflow: hidden;*/
-    background-color: var(--Brown-lightest);
-}
-
-.carousel-track {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    gap: 20px;
-}
-
-.carousel-item {
-    width: 100%;
-    /*height: 100%;
-    /*flex: 0 0 33.33%; /* Cada imagen ocupa un tercio del ancho del carrusel */
-    text-align: center;
+/*Carrusel de productos*/
+.carrusel-container {
+    width: 800px;
+    height: 400px;
+    margin: 0 auto 50px auto;
+    overflow: hidden;
     position: relative;
-    padding: 10px 50px 40px 50px;
-    box-sizing: border-box;
-    background-color: #FFFFFF;
-    border-radius: 25px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
-.carousel-item img {
-    width: 300px;
-    height: auto;
-    border-radius: 20px;
+.carrusel {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    transition: transform 1s ease-in-out;
 }
 
-.carousel-item h3 {
-    position: absolute;
-    /*bottom: 80px;*/
-    left: 50%;
-    margin-top: 20px;
-    transform: translateX(-50%);
-    color: white;
-    /*background-color: rgba(0, 0, 0, 0.5);*/
-    font-family: "Winky Sans", sans-serif, Italic;
-    color: var(--Brown-dark);
-    font-weight: 800;
-    font-size: calc(0.6rem + 1vw);
-    padding: 0px 10px 20px 10px;
-    border-radius: 5px;
-}
-.descripcion{
-    font-family: "Winky Sans", sans-serif, Italic;
-    font-weight: 500;
-    font-size: calc(0.5rem + 1vw);
-    color: var(--Brown-dark);
-    text-align: center;
-    margin: 90px auto;
-    max-width: 80%;
-    line-height: 1.6;
-    box-sizing: border-box;
+.producto {
+    width: 33.33%;
+    height: 100%;
+    display: flex;
+    background-color: white;
 }
 
-.explore-btn {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--Brown-dark);
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 30px;
-    font-family: "Winky Sans", sans-serif, Italic;
-    font-weight: 800;
-    letter-spacing: 2px;
-    cursor: pointer;
-    font-size: 1.3rem;
-    margin-top:  50px;
+.imagen-producto {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
 }
 
-.explore-btn:hover {
-    background-color: var(--Brown-light);
-    color: var(--Brown-dark);
-    border: var(--Brown-dark) solid 1px;
+.imagen-producto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-/* Botones de navegación */
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    z-index: 10;
-    font-size: 24px;
-    border-radius: 50%;
+.info-producto {
+    width: 50%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.prev-btn {
-    left: 10px;
+.info-producto h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
 }
 
-.next-btn {
-    right: 10px;
+.info-producto p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
 }
 
-.carousel-btn:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
+.precio {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+} 
 
-/* Carrusel images metodos*/
+
+/* Seccion de Recetas*/
 .container-five{
     background-color: #FFFFFF;
     margin: 0px 0px 50px 0px;
@@ -600,158 +547,13 @@ header {
     color: var(--Brown-dark); 
 }
 
-/*PRUEBA DE GEMINI*/
-.carousel-recetas {
-    overflow: hidden; /* Oculta las tarjetas que no están visibles */
-    margin: 20px; /* Espacio alrededor del carrusel */
-}
+/*Carrusel de recetas*/
 
-.carousel-track {
-    display: flex; /* Coloca las tarjetas en línea horizontal */
-    transition: transform 0.5s ease-in-out; /* Transición suave para el movimiento */
-    /* Ajusta el ancho según la cantidad de tarjetas y el ancho deseado */
-    width: calc(6 * (300px + 20px)); /* Ejemplo: 6 tarjetas de 300px de ancho + 20px de margen */
-}
 
-.tarjeta-receta {
-    display: flex;
-    flex-direction: row; /* Coloca la imagen y el texto en columna */
-    flex-shrink: 0; /* Evita que las tarjetas se encojan */
-    width: 300px; /* Ancho deseado para cada tarjeta */
-    margin-right: 200px; /* Espacio entre tarjetas */
-    border-radius: 10px;
-    
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-}
 
-.tarjeta-receta:last-child {
-    margin-right: 0; /* Elimina el margen de la última tarjeta */
-}
 
-.carousel-control {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    font-size: 1.5em;
-    color: #aaa;
-    cursor: pointer;
-    padding: 10px;
-    z-index: 10;
-    outline: none;
-}
 
-.carousel-control.prev {
-    left: 10px;
-}
 
-.carousel-control.next {
-    right: 10px;
-}
-
-/* Estilos para pausar la transición al pasar el cursor */
-.carousel-recetas:hover .carousel-track {
-    transition-duration: 0s; /* Detiene la transición inmediatamente */
-}
-
-.image-receta {
-    width: 100%;
-    height: auto;
-    border: none;
-    border-radius: none;
-    display: block; /* Evita espacio extra debajo de la imagen */
-}
-
-.container-text {
-    text-align: left;
-    padding: 15px;
-    border-left: transparent;
-    border: var(--Brown-dark) solid 1px;
-    border-radius: none;
-}
-
-.referencia {
-    font-size: 0.8em;
-    color: #777;
-    margin-bottom: 5px;
-}
-
-.title-receta {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.subtitle-receta {
-    font-size: 1em;
-    color: #555;
-    margin-bottom: 15px;
-}
-
-.container-subtitle-receta {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.container-subtitle-receta .icon {
-    margin-right: 5px;
-}
-
-.container-subtitle-receta .icon img {
-    height: 16px;
-    width: auto;
-    vertical-align: middle;
-}
-
-.container-subtitle-receta .ingredients-text,
-.container-subtitle-receta .time-text {
-    font-size: 0.9em;
-    color: #666;
-    margin-left: 5px;
-}
-
-.container-subtitle-receta .time {
-    font-weight: bold;
-    margin-left: 5px;
-    color: #007bff;
-}
-
-.receta-text {
-    font-size: 0.9em;
-    color: #444;
-    line-height: 1.4;
-    margin-bottom: 15px;
-}
-
-.btn-recetas {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.btn-vermas {
-    background-color: #f0f0f0;
-    color: #333;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 0.9em;
-}
-
-.container-btn-like {
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.btn-like {
-    height: 24px;
-    width: auto;
-}
 
 /* JavaScript para la funcionalidad del carrusel (opcional, para hacerlo interactivo) */
 /* Puedes agregar botones de "anterior" y "siguiente" y usar JavaScript para manipular */
