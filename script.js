@@ -19,27 +19,43 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-const prevBtn = document.querySelector('.prev-btn');
-const nextBtn = document.querySelector('.next-btn');
-const carouselTrack = document.querySelector('.carousel-track');
-const items = document.querySelectorAll('.carousel-item');
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.getElementById("hamburger-menu");
+    const sidebar = document.getElementById("sidebar");
+    const closeSidebar = document.getElementById("close-sidebar");
 
-let currentIndex = 0;
-const itemsToShow = 3; // Número de imágenes visibles
-const totalItems = items.length;
+    hamburger.addEventListener("click", () => {
+        sidebar.classList.add("active");
+    });
 
-prevBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalItems - itemsToShow;
-    updateCarousel();
+    closeSidebar.addEventListener("click", () => {
+        sidebar.classList.remove("active");
+    });
+
+    // Cerrar sidebar al hacer clic en un enlace
+    document.querySelectorAll(".sidebar .nav-link").forEach(link => {
+        link.addEventListener("click", () => {
+            sidebar.classList.remove("active");
+        });
+    });
 });
 
-nextBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex < totalItems - itemsToShow) ? currentIndex + 1 : 0;
-    updateCarousel();
-});
+//codigo de copilot
+document.addEventListener("DOMContentLoaded", () => {
+    const track = document.querySelector(".carousel-track");
+    const items = document.querySelectorAll(".tarjeta-receta");
+    const itemWidth = items[0].offsetWidth + parseInt(getComputedStyle(items[0]).marginRight);
+    let currentPosition = 0;
 
-function updateCarousel() {
-    const itemWidth = items[0].clientWidth;
-    carouselTrack.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
-}
+    function moveCarousel() {
+        currentPosition -= itemWidth;
+        if (Math.abs(currentPosition) >= track.scrollWidth) {
+            currentPosition = 0; // Reinicia el carrusel
+        }
+        track.style.transform = `translateX(${currentPosition}px)`;
+    }
+
+    // Mueve el carrusel automáticamente cada 3 segundos
+    setInterval(moveCarousel, 3000);
+});
 

@@ -453,16 +453,16 @@ header {
 /* Carrusel */
 .container-four{
     background-color: var(--Brown-lightest);
-    padding: 0 0 120px 0;
+    padding: 60px;
     margin:0;
 }
 
 .carousel {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
+   /*position: relative;
+    /*width: 100%;
+    /*max-width: 1200px;*/
     margin: 0 auto;
-    overflow: hidden;
+    /*overflow: hidden;*/
     background-color: var(--Brown-lightest);
 }
 
@@ -473,17 +473,19 @@ header {
 }
 
 .carousel-item {
-    flex: 0 0 33.33%; /* Cada imagen ocupa un tercio del ancho del carrusel */
+    width: 100%;
+    /*height: 100%;
+    /*flex: 0 0 33.33%; /* Cada imagen ocupa un tercio del ancho del carrusel */
     text-align: center;
     position: relative;
-    padding: 10px 0px 30px 0px;
+    padding: 10px 50px 40px 50px;
     box-sizing: border-box;
     background-color: #FFFFFF;
     border-radius: 25px;
 }
 
 .carousel-item img {
-    width: 100%;
+    width: 300px;
     height: auto;
     border-radius: 20px;
 }
@@ -598,95 +600,161 @@ header {
     color: var(--Brown-dark); 
 }
 
-/*tarjetas de recetas*/
-.tarjeta-receta{
-    flex: 0 0 80%; /* Cada tarjeta ocupa el 80% del ancho del carrusel */
-    max-width: 400px; /* Tamaño máximo */
-    min-width: 300px; /* Tamaño mínimo */
+/*PRUEBA DE GEMINI*/
+.carousel-recetas {
+    overflow: hidden; /* Oculta las tarjetas que no están visibles */
+    margin: 20px; /* Espacio alrededor del carrusel */
+}
 
-    background-color: var(--Brown-lightest);
+.carousel-track {
+    display: flex; /* Coloca las tarjetas en línea horizontal */
+    transition: transform 0.5s ease-in-out; /* Transición suave para el movimiento */
+    /* Ajusta el ancho según la cantidad de tarjetas y el ancho deseado */
+    width: calc(6 * (300px + 20px)); /* Ejemplo: 6 tarjetas de 300px de ancho + 20px de margen */
+}
+
+.tarjeta-receta {
     display: flex;
-    width: 85%;
-    margin: 10px auto;
+    flex-direction: row; /* Coloca la imagen y el texto en columna */
+    flex-shrink: 0; /* Evita que las tarjetas se encojan */
+    width: 300px; /* Ancho deseado para cada tarjeta */
+    margin-right: 200px; /* Espacio entre tarjetas */
+    border-radius: 10px;
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.tarjeta-receta:last-child {
+    margin-right: 0; /* Elimina el margen de la última tarjeta */
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: #aaa;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+    outline: none;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+/* Estilos para pausar la transición al pasar el cursor */
+.carousel-recetas:hover .carousel-track {
+    transition-duration: 0s; /* Detiene la transición inmediatamente */
+}
+
+.image-receta {
+    width: 100%;
     height: auto;
-    border-radius: 50px;
+    border: none;
+    border-radius: none;
+    display: block; /* Evita espacio extra debajo de la imagen */
 }
 
-.container-text{
-    margin-left: 10px;
-    padding: 25px;
-    font-family: "Winky Sans", sans-serif, Italic;
-}
-
-.title-receta{
-    font-size: calc(1.5rem + 1vw);
-    letter-spacing: 2px;
-}
-.time{
-    font-size: 25px;
-    font-weight: 800;
-}
-.subtitle-receta{
-    font-size: calc(0.8rem + 1vw);
-    font-weight: 500;
-}
-
-.referencia{
-    font-size: calc(0.3rem + 1vw);
-    font-family: 400;
-    color: var(--Brown-dark);
-}
-.ingredients-text, .time-text, .time{
-    color: var(--Brown-dark);
-    font-size: calc(0.3rem + 1vw);
-}
-
-.referencia, .title-receta, .subtitle-receta{
+.container-text {
     text-align: left;
+    padding: 15px;
+    border-left: transparent;
+    border: var(--Brown-dark) solid 1px;
+    border-radius: none;
 }
-.container-subtitle-receta{
-    margin-top: 5px;
+
+.referencia {
+    font-size: 0.8em;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.title-receta {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.subtitle-receta {
+    font-size: 1em;
+    color: #555;
     margin-bottom: 15px;
+}
+
+.container-subtitle-receta {
     display: flex;
     align-items: center;
-    gap: 10px;
+    margin-bottom: 10px;
 }
 
-.receta-text{
-    text-align: left;
-    font-size: calc(0.3rem + 1vw);
+.container-subtitle-receta .icon {
+    margin-right: 5px;
 }
 
-.image-receta{
-    width: 40%;
-    height: auto;
-    object-fit: cover;
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
+.container-subtitle-receta .icon img {
+    height: 16px;
+    width: auto;
+    vertical-align: middle;
 }
 
-.btn-recetas{
+.container-subtitle-receta .ingredients-text,
+.container-subtitle-receta .time-text {
+    font-size: 0.9em;
+    color: #666;
+    margin-left: 5px;
+}
+
+.container-subtitle-receta .time {
+    font-weight: bold;
+    margin-left: 5px;
+    color: #007bff;
+}
+
+.receta-text {
+    font-size: 0.9em;
+    color: #444;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.btn-recetas {
     display: flex;
     justify-content: space-between;
-    gap: 1.0rem;
     align-items: center;
-    margin-top: 20px;
 }
 
-.container-btn-like{
-    background-color: transparent;
+.btn-vermas {
+    background-color: #f0f0f0;
+    color: #333;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.container-btn-like {
+    background: none;
     border: none;
     cursor: pointer;
 }
 
-.btn-vermas{
-    background-color: transparent;
-    color: var(--Brown-dark);
-    border: none;
-    cursor: pointer;
-    font-family: "Winky Sans", sans-serif, Italic;
-    font-weight: 700;
-    font-size: 25px;
-    text-align: center;
+.btn-like {
+    height: 24px;
+    width: auto;
 }
+
+/* JavaScript para la funcionalidad del carrusel (opcional, para hacerlo interactivo) */
+/* Puedes agregar botones de "anterior" y "siguiente" y usar JavaScript para manipular */
+/* la propiedad 'transform' del '.carousel-track' para mover las tarjetas. */
+
 
