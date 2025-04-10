@@ -690,14 +690,3 @@ header {
     text-align: center;
 }
 
-.carousel-recetas {
-    overflow: hidden; /* Oculta las tarjetas que no están visibles */
-    width: 100%; /* Ajusta al ancho del contenedor */
-    position: relative;
-}
-
-.carousel-track {
-    display: flex;
-    transition: transform 0.5s ease-in-out; /* Animación suave */
-    gap: 20px; /* Espaciado entre tarjetas */
-}
