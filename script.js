@@ -76,38 +76,3 @@ document.addEventListener('DOMContentLoaded', () => {
     carruselContainer.addEventListener('mouseleave', iniciarCarrusel);
 }); 
 
-//CARRUSEL DE PRODUCTOS
-document.addEventListener('DOMContentLoaded', () => {
-    const carruselProductos = document.querySelector('.carrusel-productos');
-    const carruselContainerProductos = document.querySelector('.carrusel-container-productos');
-    const productos = document.querySelectorAll('.producto');
-    let currentIndex = 0;
-    const productosVisibles = 4;
-    let intervalo2;
-    let isPaused2 = false;
-
-    function moverCarrusel() {
-        if (!isPaused2) {
-            currentIndex = (currentIndex + 1) % (productos.length - productosVisibles + 1);
-            const offset = currentIndex * -320; // 300px (ancho del producto) + 20px (gap)
-            carruselProductos.style.transform = `translateX(${offset}px)`;
-        }
-    }
-
-    function iniciarCarrusel() {
-        isPaused2 = false;
-        intervalo2 = setInterval(moverCarrusel, 4000);
-    }
-
-    function detenerCarrusel() {
-        isPaused2 = true;
-        clearInterval(intervalo2);
-    }
-
-    // Iniciar el carrusel automático
-    iniciarCarrusel();
-
-    // Eventos para pausar y reanudar el carrusel
-    carruselContainerProductos.addEventListener('mouseenter', detenerCarrusel);
-    carruselContainerProductos.addEventListener('mouseleave', iniciarCarrusel);
-}); 
