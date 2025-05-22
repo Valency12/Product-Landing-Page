@@ -66,10 +66,7 @@ header {
 }
 
 .nav-link:hover {
-    background-color: var(--Brown-second-dark);
-    color: var(--Brown-lightest);
-    border-bottom: var(--Brown-dark) solid 3px;
-    padding: 1.4rem 1rem;
+    color: var(--Brown-second-dark);
 }
 
 /* Botones */
@@ -105,6 +102,27 @@ header {
 .header-button2:hover {
     background-color: var(--Brown-lightest);
     color: var(--Brown-dark);
+}
+
+.btncallaction {
+    background-color: var(--Brown-dark);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    font-family: "Winky Sans", sans-serif, Italic;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btncallaction:hover {
+    background-color: var(--Brown-light);
+    color: var(--Brown-dark);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Menú Hamburguesa */
