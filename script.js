@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function iniciarCarrusel() {
         isPaused = false;
-        intervalo = setInterval(moverCarrusel, 2000);
+        intervalo = setInterval(moverCarrusel, 5000);
     }
 
     function detenerCarrusel() {
